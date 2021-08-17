@@ -1,1 +1,31 @@
-<ssh>                                                                                                                   /etc/ssh/ssh_config(client)                                                                                             /etc/ssh/sshd_config(server)                                                                                            <password-plicy>                                                                                                        /etc/pam.d/common-passwd(including root)                                                                                /etc/security/pwquality_conf(other than root)                                                                           confirm passwd-policy:chage -l <user>                                                                                   mio1:when sudo,passwd is needed.                                                                                        other than root, mio1:sudo use is prohibited                                                                            <sudo>                                                                                                                  visudo                                                                                                                  <ufw>                                                                                                                   ufw status                                                                                                              ufw enable                                                                                                              ufw disable                                                                                                             allow port-connection:ufw allow <port>                                                                                  delete port:ufw delete <port>                                                                                           <hostname>                                                                                                              hostnamectl set hostname <new-hostname>                                                                                 <user>                                                                                                                  adduser <new-user>                                                                                                      adduser <user-name> <group>                                                                                             <cron>                                                                                                                  status:system status cron                                                                                               systemctl start cron                                                                                                    cofirming whether auto:systemctl is-enabled cron                                                                        start auto:systemctl enable cron                                                                                        stop suto:systemctl disable cron                                                                                        decide confition:crontab -e                                                                                             <lvm-active>                                                                                                            lvscan  
+<ssh>
+/etc/ssh/ssh_config(client)
+/etc/ssh/sshd_config(server)
+<password-plicy>
+/etc/pam.d/common-passwd(including root)
+/etc/security/pwquality_conf(other than root)
+confirm passwd-policy:chage -l <user>
+mio1:when sudo,passwd is needed.
+other than root, mio1:sudo use is prohibited
+<sudo>
+visudo
+<ufw>
+ufw status
+ufw enable
+ufw disable
+allow port-connection:ufw allow <port>
+delete port:ufw delete <port>
+<hostname>
+hostnamectl set hostname <new-hostname>
+<user>
+adduser <new-user>
+adduser <user-name> <group>
+<cron>
+status:system status cron
+systemctl start cron
+cofirming whether auto:systemctl is-enabled cron
+start auto:systemctl enable cron
+stop suto:systemctl disable cron
+decide confition:crontab -e
+<lvm-active>
+lvscan
