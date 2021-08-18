@@ -23,7 +23,6 @@ if [ lvscan_num = 0 ];then
 fi
 	LVM_use="yes"
 
-echo	"$lvscan_num"
 echo	"	#Architecture: $Architecture"
 echo	"	#CPU physical: $CPU_pysical"
 echo	"	#vCPU: $vCPU"

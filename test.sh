@@ -1,0 +1,2 @@
+ifconfig
+wll ifconfig
