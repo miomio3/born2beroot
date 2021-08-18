@@ -18,7 +18,7 @@ MAC_address=`ifconfig | grep "ether" -m1 | awk '{print $2}'`
 sudo_executedx2=`cat /var/log/sudo/sudolog | wc -l`
 sudo_executed=`expr $sudo_executedx2 / 2`
 lvscan_num=`lvscan | grep "ACTIVE" | wc -l`
-if [lvscan_num==0];then
+if [ lvscan_num = 0 ];then
 	LVM_use="no"
 fi
 	LVM_use="yes"
