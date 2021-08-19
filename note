@@ -1,6 +1,14 @@
+<notion>
+Lvm can be created and set in set-up of Debian.
+
 <ssh>
+set virtual-box-setting to bridge
+---port-number etc.setting---
 /etc/ssh/ssh_config(client)
 /etc/ssh/sshd_config(server)
+-----------------------------
+ip-address:ifconfig>>inet000.000.000.000
+ssh <user-name>@000.000.000.000 -p<port-number>
 
 <password-plicy>
 /etc/pam.d/common-passwd(including root)
@@ -35,7 +43,8 @@ stop suto:systemctl disable cron
 decide confition:crontab -e
 
 <lvm-active>
-lvscan
+confirm:lvscan
+turn on:lvchange -ay
 
 <lvm-rename,create>
 ---display---
@@ -51,6 +60,9 @@ vgrename <old> <new>
 >>reboot
 ---size---
 vgreduce -L -<size-of-reduce> <path of lvm>
+vgresize -L <size> <path of lvm>
+resize2fs <path> <size>
+>>home and root directory cannot be resize
 ---create---
 lvcreate  -L <size of lvm><M or G> -n <name of lvm> <name of vg>
 mkfs -t <type of file-system, ext4 etc> <path of lvm>
