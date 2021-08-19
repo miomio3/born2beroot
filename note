@@ -42,8 +42,13 @@ lvscan
 vgdisplay
 lvdisplay
 ---rename---
-vgrename
-lvrename
+vgrename <old> <new>
+>>sed -i 's/<old>/<new>/g' /etc/fstab
+>>sed -i 's/<old>/<new>/g' /boot/grub/grub.cfg
+>>sed -i 's/<old>/<new>/g' /etc/initramfs-tools/conf.d/resume
+>>update-iniramfs -u -k all
+>>shutdown now (when shutdown stop, turn off VM)
+>>reboot
 ---size---
 vgreduce -L -<size-of-reduce> <path of lvm>
 ---create---
