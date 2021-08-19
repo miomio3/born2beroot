@@ -1,8 +1,10 @@
 <notion>
 Lvm can be created and set in set-up of Debian.
+Wordpress setup is incomplete.
+I didn't submit this word, so this work is imperfect.
 
 <ssh>
-set virtual-box-setting to bridge
+set virtual-box-setting to bridge or portfoward.
 ---port-number etc.setting---
 /etc/ssh/ssh_config(client)
 /etc/ssh/sshd_config(server)
